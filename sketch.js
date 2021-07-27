@@ -17,7 +17,7 @@ function setup() {
     createCanvas(600,600)
     space=createSprite(300,300)
     space.addImage("space",spaceImg)
-    space.velocityY=1
+    
 
     rocket=createSprite(200,400,20,20)
     rocket.addImage("rocket",rocketImg)
@@ -46,7 +46,7 @@ function draw() {
     if(keyDown("space")) {
         rocket.velocityY=-10
     }
-    rocket.velocityY=rocket.velocityY+0.8
+    
 
 spawnAsteroids()
 drawSprites()
@@ -92,7 +92,7 @@ function spawnAsteroids(){
 
         invisibleBlock.debug=true
 
-        asteroidsGroup.add(asteoid)
+        asteroidsGroup.add(asteroid)
         invisibleBlockGroup.add(invisibleBlock)
 
         asteroid.lifetime=800
